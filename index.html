@@ -89,8 +89,11 @@
                      color: #f9fafb; font-size: 0.85rem; padding: 0 2rem; }
 
     /* Render on the left, labeling controls on the right. */
+    /* One frame around the layout under judgement and its controls, so the two read as a single
+       working area rather than two loose columns. The columns inside stay unframed. */
     .split { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
-             gap: 2.2rem; align-items: start; }
+             gap: 2.2rem; align-items: start; border: 1px solid #e5e7eb; border-radius: 8px;
+             padding: 1rem 1.1rem; }
     .box { padding: 0; background: #fff; }
     .preview { min-height: 420px; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
                justify-content: center; padding: 0; }
