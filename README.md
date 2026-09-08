@@ -6,11 +6,14 @@ Thanks for helping with this. It should take about 16-26 minutes.
 
 Just open the link you were sent. It runs in your browser; there is nothing to install.
 
-## You are identified by your link
+## Your name or initials
 
-Your link ends in `?p=` followed by your id, and the landing page fills it in for you. That is how
-your answers are attributed, so please use the link that was sent to you rather than someone
-else's.
+The landing page asks for your name or initials before it will let you start, and that is what
+identifies your answers. If your link already has something filled in, leave it as it is; otherwise
+type your own.
+
+Please use the same one every time -- if you come back later, or if you were sent more than one link.
+Two people entering the same initials would have their answers pooled together.
 
 ## What you are judging
 
