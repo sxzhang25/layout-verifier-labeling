@@ -173,6 +173,7 @@
         <li>You can move between sections at any time using the links at the top.</li>
       </ol>
 
+      <div id="annotator-block">
       <h2>Before you start</h2>
       <p>
         Enter your name or initials prior to starting.
@@ -182,6 +183,7 @@
         <input type="text" id="annotator" size="20" placeholder="e.g. AB"
                autocomplete="off" spellcheck="false" />
         <span class="hint" id="annotator-note"></span>
+      </div>
       </div>
 
       <div class="startrow">
@@ -2464,7 +2466,10 @@
       return node ? JSON.parse(node.textContent) : null;
     })();
     const OFFLINE = EMBEDDED !== null;
-    const STORE_KEY = OFFLINE ? "blind-labels:" + EMBEDDED.session_id : null;
+    // Per *session and participant*. Keying on the session alone meant every identity in one
+    // browser shared one label store, so `?p=1` and the bare URL showed each other's answers.
+    const BASE_KEY = OFFLINE ? "blind-labels:" + EMBEDDED.session_id : null;
+    const storeKey = (who) => (BASE_KEY && who ? `${BASE_KEY}:${who}` : null);
 
     // chapters: [{domain, task, label, prompt, dev_examples, item_ids}]. `pos` indexes the current
     // chapter's items, not the flat list: the brief and dev gallery belong to the chapter, so the
@@ -2487,17 +2492,17 @@
     }
 
     // --- label store ---------------------------------------------------------
-    function loadStored() {
-      if (!OFFLINE) return {};
-      try { return JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); } catch { return {}; }
+    function loadStored(who) {
+      const key = storeKey(who);
+      if (!key) return {};
+      try { return JSON.parse(localStorage.getItem(key) || "{}"); } catch { return {}; }
     }
     // Same rule as sanitize_annotator() in src/data/blind_sessions.py: the id becomes a filename.
     function cleanAnnotator(raw) {
       return (raw || "").trim().replace(/[^A-Za-z0-9_-]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40);
     }
-    const ANNOTATOR_KEY = OFFLINE ? STORE_KEY + ":annotator" : null;
-    const OUTBOX_KEY = OFFLINE ? STORE_KEY + ":outbox" : null;
-    const PLACE_KEY = OFFLINE ? STORE_KEY + ":place" : null;
+    const outboxKey = (who) => (BASE_KEY && who ? `${BASE_KEY}:${who}:outbox` : null);
+    const placeKey = (who) => (BASE_KEY && who ? `${BASE_KEY}:${who}:place` : null);
     // ?p=alice in the link, so a participant never types their own id.
     const PARAM_ID = cleanAnnotator(new URLSearchParams(location.search).get("p") || "");
     const ENDPOINT = (typeof window.STUDY_ENDPOINT === "string" && window.STUDY_ENDPOINT) || "";
@@ -2506,23 +2511,37 @@
     function annotatorId() { return cleanAnnotator(el("annotator").value); }
     function loadAnnotator() {
       if (!OFFLINE) return "";
-      // The URL wins: a link is the assignment, so a corrected link fixes their id rather than
-      // being shadowed by localStorage.
-      return PARAM_ID || localStorage.getItem(ANNOTATOR_KEY) || cleanAnnotator(EMBEDDED.annotator);
+      // Only the link, or an operator-set default. Deliberately *not* remembered from a previous
+      // visit: pre-filling the last id would put the bare URL back into whoever used this browser
+      // before, which is the confusion this keying is meant to remove. A returning participant
+      // types the same initials and gets their own answers back.
+      return PARAM_ID || cleanAnnotator(EMBEDDED.annotator);
     }
     function storeLabel(itemId, label) {
-      const all = loadStored();
+      const who = annotatorId();
+      const key = storeKey(who);
+      if (!key) return;
+      const all = loadStored(who);
       if (label === null) delete all[itemId]; else all[itemId] = label;
-      localStorage.setItem(STORE_KEY, JSON.stringify(all));
+      localStorage.setItem(key, JSON.stringify(all));
     }
     function savePlace() {
-      if (PLACE_KEY) {
-        localStorage.setItem(PLACE_KEY, JSON.stringify({ chapter: state.chapter, pos: state.pos }));
-      }
+      const key = placeKey(annotatorId());
+      if (key) localStorage.setItem(key, JSON.stringify({ chapter: state.chapter, pos: state.pos }));
     }
     function loadPlace() {
-      if (!PLACE_KEY) return null;
-      try { return JSON.parse(localStorage.getItem(PLACE_KEY) || "null"); } catch { return null; }
+      const key = placeKey(annotatorId());
+      if (!key) return null;
+      try { return JSON.parse(localStorage.getItem(key) || "null"); } catch { return null; }
+    }
+
+    /** Point `state.items` at this participant's saved answers. */
+    function applyStoredLabels() {
+      const stored = loadStored(annotatorId());
+      state.items.forEach((item) => {
+        item.label = Object.prototype.hasOwnProperty.call(stored, item.item_id)
+          ? stored[item.item_id] : null;
+      });
     }
 
     // --- upload outbox ------------------------------------------------------
@@ -2530,11 +2549,13 @@
     // connection costs nothing. Labels live in localStorage independently; the outbox governs
     // delivery only, and a permanently broken endpoint still leaves Download JSON.
     function loadOutbox() {
-      if (!OUTBOX_KEY) return [];
-      try { return JSON.parse(localStorage.getItem(OUTBOX_KEY) || "[]"); } catch { return []; }
+      const key = outboxKey(annotatorId());
+      if (!key) return [];
+      try { return JSON.parse(localStorage.getItem(key) || "[]"); } catch { return []; }
     }
     function saveOutbox(events) {
-      if (OUTBOX_KEY) localStorage.setItem(OUTBOX_KEY, JSON.stringify(events));
+      const key = outboxKey(annotatorId());
+      if (key) localStorage.setItem(key, JSON.stringify(events));
     }
     function queueEvent(ev) {
       if (!ENDPOINT) return;
@@ -2924,14 +2945,40 @@
       const who = annotatorId();
       // Gated because the id is the only thing tying answers to a person: a pass labeled by nobody
       // cannot be attributed after the fact.
-      el("btn-start").disabled = !who;
-      el("annotator-note").textContent = who ? `saved as "${who}"` : "required";
       el("who").textContent = who || "";
-      if (OFFLINE && who) localStorage.setItem(ANNOTATOR_KEY, who);
+      if (!OFFLINE) {
+        // Served locally: the session file already records who is labeling (--annotator), and the
+        // answers go to the server rather than to a per-participant store. Nothing to gate on.
+        el("btn-start").disabled = false;
+        el("annotator-block").classList.add("hidden");
+        return;
+      }
+      el("btn-start").disabled = !who;
+      if (!who) {
+        el("annotator-note").textContent = "required";
+        el("btn-start").textContent = "Start";
+        return;
+      }
+      // The saved answers belong to whoever is named right now, so re-point at them as the box is
+      // typed into. Typing a different id switches to a different, independent pass.
+      applyStoredLabels();
+      const done = state.items.filter(decided).length;
+      el("annotator-note").textContent = done
+        ? `${done} answer(s) already saved for "${who}"` : `new: "${who}"`;
+      el("btn-start").textContent = done ? "Continue" : "Start";
+      renderChapNav();
     }
     el("btn-start").addEventListener("click", () => {
-      if (!annotatorId()) { el("annotator").focus(); return; }
-      goChapter(firstUnfinishedChapter());
+      // Only the shared bundle needs an id: it is what separates one participant's saved answers
+      // from another's in the same browser. Served locally, the session file already knows.
+      if (OFFLINE && !annotatorId()) { el("annotator").focus(); return; }
+      applyStoredLabels();
+      const place = loadPlace();
+      if (place && Number.isInteger(place.chapter) && place.chapter < state.chapters.length) {
+        goChapter(place.chapter, place.pos || 0);
+      } else {
+        goChapter(firstUnfinishedChapter());
+      }
     });
     el("btn-true").addEventListener("click", () => saveLabel(1));
     el("btn-false").addEventListener("click", () => saveLabel(0));
@@ -2972,11 +3019,8 @@
       let data;
       if (OFFLINE) {
         data = EMBEDDED;
-        const stored = loadStored();
-        data.items.forEach((item) => {
-          item.label = Object.prototype.hasOwnProperty.call(stored, item.item_id)
-            ? stored[item.item_id] : null;
-        });
+        // Labels are applied once the participant is known -- see syncStart().
+        data.items.forEach((item) => { item.label = null; });
       } else {
         try {
           data = await getJSON("/api/state");
@@ -2992,24 +3036,16 @@
       }
 
       el("annotator").value = loadAnnotator();
-      syncStart();
+      syncStart();   // also loads this participant's answers, if the box is pre-filled
       el("landing-note").textContent = ENDPOINT
         ? "Your answers upload automatically as you go."
         : "Your answers are kept in this browser as you go.";
 
       renderGuidelines();
-      const place = loadPlace();
-      if (place && Number.isInteger(place.chapter) && place.chapter < state.chapters.length) {
-        state.chapter = place.chapter;
-        state.pos = place.pos || 0;
-      } else {
-        state.chapter = firstUnfinishedChapter();
-      }
       renderChapNav();
       // Always land on the instructions: the dev-set standard is the point of the study, and
       // someone returning mid-run is still one click from their place.
       show("landing");
-      if (state.items.some(decided)) el("btn-start").textContent = "Continue";
 
       if (OFFLINE && ENDPOINT) {
         renderUpload();
