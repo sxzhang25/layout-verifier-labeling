@@ -2189,7 +2189,7 @@
     {
       "domain": "poster2d",
       "title": "2D posters and book covers",
-      "text": "Beyond the task description, also evaluate the general goodness of the design: whether it is legible, whether anything runs off the edge of the page, whether text is rotated oddly or overlaps other elements, etc. Do not judge the appearance or quality of the images themselves"
+      "text": "Beyond the task description, also evaluate the general goodness of the design: whether it is legible, whether anything runs off the edge of the page, whether text is rotated oddly or overlaps other elements, etc. Do not judge the appearance or quality of the images themselves."
     }
   ],
   "scope_note": "Judge **how things are placed**, not how they look. You should evaluate what types of objects are present and how they are arranged."

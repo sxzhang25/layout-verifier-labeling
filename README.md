@@ -47,7 +47,7 @@ Judge **how things are placed**, not how they look. You should evaluate what typ
 
 **3D rooms** -- Beyond the task description, also evaluate the general goodness of the room: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks, e.g. its style, colour or model quality.
 
-**2D posters and book covers** -- Beyond the task description, also evaluate the general goodness of the design: whether it is legible, whether anything runs off the edge of the page, whether text is rotated oddly or overlaps other elements, etc. Do not judge the appearance or quality of the images themselves
+**2D posters and book covers** -- Beyond the task description, also evaluate the general goodness of the design: whether it is legible, whether anything runs off the edge of the page, whether text is rotated oddly or overlaps other elements, etc. Do not judge the appearance or quality of the images themselves.
 
 ## Labeling
 
