@@ -1695,18 +1695,18 @@
       "prompt_source": "",
       "dev_examples": [
         {
-          "label": false,
-          "notes": "nightstand and armchair intersect",
+          "label": true,
+          "notes": "Looks good",
           "src": "assets/a0120.png"
-        },
-        {
-          "label": false,
-          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
-          "src": "assets/a0121.png"
         },
         {
           "label": true,
           "notes": "Looks good",
+          "src": "assets/a0121.png"
+        },
+        {
+          "label": false,
+          "notes": "nightstand and armchair intersect",
           "src": "assets/a0122.png"
         },
         {
@@ -1716,22 +1716,22 @@
         },
         {
           "label": false,
-          "notes": "armchair is out of bounds\nNeeds two nightstands",
+          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
           "src": "assets/a0124.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
+          "notes": "armchair is out of bounds\nNeeds two nightstands",
           "src": "assets/a0125.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical\nwardrobe and floor_light intersect",
+          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
           "src": "assets/a0126.png"
         },
         {
-          "label": true,
-          "notes": "Looks good",
+          "label": false,
+          "notes": "Nightstands are not identical\nwardrobe and floor_light intersect",
           "src": "assets/a0127.png"
         },
         {
@@ -1777,53 +1777,53 @@
       "prompt_source": "",
       "dev_examples": [
         {
-          "label": false,
-          "notes": "chairs not facing music stands\nchairs facing outwards in semi-circle rather than inwards",
+          "label": true,
+          "notes": "Looks good",
           "src": "assets/a0130.png"
         },
         {
           "label": false,
-          "notes": "chair and music_stand intersect\nchairs not angled properly in semi-circle\nmusic stand not facing chair",
+          "notes": "chairs not facing music stands\nchairs facing outwards in semi-circle rather than inwards",
           "src": "assets/a0131.png"
         },
         {
           "label": false,
-          "notes": "chairs angled outwards in semi-circle rather than inwards",
+          "notes": "chair and music_stand intersect\nchairs not angled properly in semi-circle\nmusic stand not facing chair",
           "src": "assets/a0132.png"
         },
         {
           "label": false,
-          "notes": "chair and music_stand intersect\nchairs face outwards in semi-circle rather than inwards\nmusic stands are not in front of chairs\nmusic stands not facing chairs",
+          "notes": "chairs angled outwards in semi-circle rather than inwards",
           "src": "assets/a0133.png"
         },
         {
           "label": false,
-          "notes": "music stands not facing towards chairs",
+          "notes": "chair and music_stand intersect\nchairs face outwards in semi-circle rather than inwards\nmusic stands are not in front of chairs\nmusic stands not facing chairs",
           "src": "assets/a0134.png"
         },
         {
           "label": false,
-          "notes": "chairs face outwards of semi-circle rather than inwards",
+          "notes": "music stands not facing towards chairs",
           "src": "assets/a0135.png"
         },
         {
           "label": false,
-          "notes": "music stands not facing chairs",
+          "notes": "chairs face outwards of semi-circle rather than inwards",
           "src": "assets/a0136.png"
         },
         {
           "label": false,
-          "notes": "chair and music_stand intersect\nchairs are not arranged in semi-circle",
+          "notes": "music stands not facing chairs",
           "src": "assets/a0137.png"
         },
         {
           "label": false,
-          "notes": "piano not in the corner of the room",
+          "notes": "chair and music_stand intersect\nchairs are not arranged in semi-circle",
           "src": "assets/a0138.png"
         },
         {
-          "label": true,
-          "notes": "Looks good",
+          "label": false,
+          "notes": "piano not in the corner of the room",
           "src": "assets/a0139.png"
         }
       ],
@@ -1874,23 +1874,23 @@
           "src": "assets/a0142.png"
         },
         {
+          "label": true,
+          "notes": "Looks good",
+          "src": "assets/a0143.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good",
+          "src": "assets/a0144.png"
+        },
+        {
           "label": false,
           "notes": "There are chairs facing the shorter side of the table\npainting is oriented perpendicular to the wall",
-          "src": "assets/a0143.png"
+          "src": "assets/a0145.png"
         },
         {
           "label": false,
           "notes": "There are chairs facing the shorter side of the table\npainting and cabinet intersect\nthere is no buffet area",
-          "src": "assets/a0144.png"
-        },
-        {
-          "label": true,
-          "notes": "Looks good",
-          "src": "assets/a0145.png"
-        },
-        {
-          "label": true,
-          "notes": "Looks good",
           "src": "assets/a0146.png"
         },
         {
@@ -1951,13 +1951,13 @@
           "src": "assets/a0151.png"
         },
         {
-          "label": false,
-          "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/a0152.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
+          "label": false,
+          "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
           "src": "assets/a0153.png"
         },
         {
@@ -2023,13 +2023,13 @@
       "prompt_source": "",
       "dev_examples": [
         {
-          "label": false,
-          "notes": "title is out of bounds\nSparrows are not scattered across the cover",
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/a0160.png"
         },
         {
-          "label": false,
-          "notes": "title is out of bounds",
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/a0161.png"
         },
         {
@@ -2038,13 +2038,13 @@
           "src": "assets/a0162.png"
         },
         {
-          "label": false,
-          "notes": "Sparrows are not scattered across the cover",
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/a0163.png"
         },
         {
           "label": false,
-          "notes": "title is out of bounds",
+          "notes": "title is out of bounds\nSparrows are not scattered across the cover",
           "src": "assets/a0164.png"
         },
         {
@@ -2053,23 +2053,23 @@
           "src": "assets/a0165.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
+          "label": false,
+          "notes": "Sparrows are not scattered across the cover",
           "src": "assets/a0166.png"
         },
         {
           "label": false,
-          "notes": "Sparrows are not scattered across the cover",
+          "notes": "title is out of bounds",
           "src": "assets/a0167.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
+          "label": false,
+          "notes": "title is out of bounds",
           "src": "assets/a0168.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
+          "label": false,
+          "notes": "Sparrows are not scattered across the cover",
           "src": "assets/a0169.png"
         }
       ],
@@ -2145,13 +2145,13 @@
           "src": "assets/a0177.png"
         },
         {
-          "label": false,
-          "notes": "One of the people images is not white colored",
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/a0178.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
+          "label": false,
+          "notes": "One of the people images is not white colored",
           "src": "assets/a0179.png"
         }
       ],

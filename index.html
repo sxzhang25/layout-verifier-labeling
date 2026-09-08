@@ -41,16 +41,16 @@
     /* The brief, full width, directly under the header. */
     /* Deliberately the loudest block on the page: it is the criterion every verdict is measured
        against, and it competes for attention with a 500px gallery right underneath it. */
-    .brief { border: 1px solid #bfdbfe; border-left: 5px solid #1d4ed8; border-radius: 8px;
-             padding: 0.75rem 1rem; margin-bottom: 0.7rem; background: #eff6ff; }
+    .brief { border: 1px solid #d1d5db; border-left: 5px solid #1d4ed8; border-radius: 8px;
+             padding: 0.75rem 1rem; margin-bottom: 1.6rem; background: #f3f4f6; }
     .brief h2 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; color: #1d4ed8;
                 text-transform: uppercase; letter-spacing: 0.07em; }
     .brief p { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.55;
                white-space: pre-wrap; word-break: break-word; color: #111827; }
 
     /* Dev set: a horizontal scrolling gallery immediately below the brief. */
-    .devwrap { border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;
-               padding: 0.6rem 0.7rem 0.5rem; margin-bottom: 1rem; }
+    /* No frame: sections are separated by whitespace, not by nested rounded boxes. */
+    .devwrap { padding: 0; margin-bottom: 1.9rem; }
     .devhead { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.5rem; }
     #btn-dev-toggle { padding: 0.1rem 0.45rem; font-size: 0.72rem; color: #4b5563;
                       border-color: #d1d5db; }
@@ -59,20 +59,24 @@
     .devwrap h2 span { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b7280; }
     .devstrip { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.4rem;
                 align-items: stretch; }
-    /* A 2px verdict-coloured border so True and False are separable at a glance, and True cards
-       come first, so the strip reads "right looks like this, wrong looks like this". */
-    /* Wide enough that a square scene3d render fills the 400px image box instead of being
-       letterboxed to its width -- at 340px the images rendered 340x340 in a 340x400 slot. */
-    .devcard { flex: 0 0 420px; border: 2px solid #e5e7eb; border-radius: 6px; background: #fff;
-               padding: 0.4rem; display: flex; flex-direction: column; }
-    .devcard.t { border-color: #16a34a; }
-    .devcard.f { border-color: #dc2626; }
-    .devcard img { width: 100%; height: 400px; object-fit: contain; background: #fff;
+    /* Unframed, like every other section: the verdict is carried by the *text* colour instead, so
+       every word in a card is green or red and the strip stays flat.
+       Wide enough that a square scene3d render fills the image box rather than being letterboxed to
+       its width -- at 340px the images rendered 340x340 in a 340x400 slot. */
+    .devcard { flex: 0 0 420px; background: #fff; padding: 0.4rem 0.4rem 0.2rem;
+               display: flex; flex-direction: column; }
+    .devcard.t, .devcard.t .verdict, .devcard.t .noteshead, .devcard.t .notes { color: #166534; }
+    .devcard.f, .devcard.f .verdict, .devcard.f .noteshead, .devcard.f .notes { color: #b91c1c; }
+    .devcard img { width: 100%; height: 360px; object-fit: contain; background: #fff;
                    cursor: zoom-in; }
-    .devcard .verdict { font-size: 0.8rem; font-weight: 700; margin-top: 0.3rem; }
-    .devcard .verdict.t { color: #166534; }
-    .devcard .verdict.f { color: #b91c1c; }
-    .devcard .notes { font-size: 0.76rem; color: #374151; line-height: 1.4; white-space: pre-wrap; }
+    /* The verdict leads the card, at the same size as the task description, so the strip can be
+       read as "these are right, these are wrong" without inspecting each caption. */
+    .devcard .verdict { font-size: 1rem; font-weight: 700; text-align: center;
+                        margin: 0.1rem 0 0.4rem; }
+
+    .devcard .noteshead { font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+                          letter-spacing: 0.06em; margin: 0.45rem 0 0.1rem; }
+    .devcard .notes { font-size: 0.76rem; line-height: 1.4; white-space: pre-wrap; }
 
     /* Zoomed dev example, as an overlay so the strip does not reflow. */
     .lightbox { position: fixed; inset: 0; background: rgba(17,24,39,0.82); z-index: 50;
@@ -84,10 +88,10 @@
 
     /* Render on the left, labeling controls on the right. */
     .split { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, 0.55fr);
-             gap: 1rem; align-items: start; }
-    .box { border: 1px solid #d1d5db; border-radius: 8px; padding: 0.8rem; background: #fff; }
+             gap: 2.2rem; align-items: start; }
+    .box { padding: 0; background: #fff; }
     .preview { min-height: 420px; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
-               justify-content: center; background: #f9fafb; border-radius: 6px; padding: 0.4rem; }
+               justify-content: center; padding: 0; }
     .preview img { max-width: 100%; max-height: 74vh; object-fit: contain; background: #fff; }
     .preview.two img { max-width: 48%; }
     .preview-error { color: #b91c1c; font-size: 0.8rem; }
@@ -1945,18 +1949,18 @@
    "prompt_source": "",
    "dev_examples": [
     {
-     "label": false,
-     "notes": "nightstand and armchair intersect",
+     "label": true,
+     "notes": "Looks good",
      "src": "assets/a0120.png"
-    },
-    {
-     "label": false,
-     "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
-     "src": "assets/a0121.png"
     },
     {
      "label": true,
      "notes": "Looks good",
+     "src": "assets/a0121.png"
+    },
+    {
+     "label": false,
+     "notes": "nightstand and armchair intersect",
      "src": "assets/a0122.png"
     },
     {
@@ -1966,22 +1970,22 @@
     },
     {
      "label": false,
-     "notes": "armchair is out of bounds\nNeeds two nightstands",
+     "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
      "src": "assets/a0124.png"
     },
     {
      "label": false,
-     "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
+     "notes": "armchair is out of bounds\nNeeds two nightstands",
      "src": "assets/a0125.png"
     },
     {
      "label": false,
-     "notes": "Nightstands are not identical\nwardrobe and floor_light intersect",
+     "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
      "src": "assets/a0126.png"
     },
     {
-     "label": true,
-     "notes": "Looks good",
+     "label": false,
+     "notes": "Nightstands are not identical\nwardrobe and floor_light intersect",
      "src": "assets/a0127.png"
     },
     {
@@ -2027,53 +2031,53 @@
    "prompt_source": "",
    "dev_examples": [
     {
-     "label": false,
-     "notes": "chairs not facing music stands\nchairs facing outwards in semi-circle rather than inwards",
+     "label": true,
+     "notes": "Looks good",
      "src": "assets/a0130.png"
     },
     {
      "label": false,
-     "notes": "chair and music_stand intersect\nchairs not angled properly in semi-circle\nmusic stand not facing chair",
+     "notes": "chairs not facing music stands\nchairs facing outwards in semi-circle rather than inwards",
      "src": "assets/a0131.png"
     },
     {
      "label": false,
-     "notes": "chairs angled outwards in semi-circle rather than inwards",
+     "notes": "chair and music_stand intersect\nchairs not angled properly in semi-circle\nmusic stand not facing chair",
      "src": "assets/a0132.png"
     },
     {
      "label": false,
-     "notes": "chair and music_stand intersect\nchairs face outwards in semi-circle rather than inwards\nmusic stands are not in front of chairs\nmusic stands not facing chairs",
+     "notes": "chairs angled outwards in semi-circle rather than inwards",
      "src": "assets/a0133.png"
     },
     {
      "label": false,
-     "notes": "music stands not facing towards chairs",
+     "notes": "chair and music_stand intersect\nchairs face outwards in semi-circle rather than inwards\nmusic stands are not in front of chairs\nmusic stands not facing chairs",
      "src": "assets/a0134.png"
     },
     {
      "label": false,
-     "notes": "chairs face outwards of semi-circle rather than inwards",
+     "notes": "music stands not facing towards chairs",
      "src": "assets/a0135.png"
     },
     {
      "label": false,
-     "notes": "music stands not facing chairs",
+     "notes": "chairs face outwards of semi-circle rather than inwards",
      "src": "assets/a0136.png"
     },
     {
      "label": false,
-     "notes": "chair and music_stand intersect\nchairs are not arranged in semi-circle",
+     "notes": "music stands not facing chairs",
      "src": "assets/a0137.png"
     },
     {
      "label": false,
-     "notes": "piano not in the corner of the room",
+     "notes": "chair and music_stand intersect\nchairs are not arranged in semi-circle",
      "src": "assets/a0138.png"
     },
     {
-     "label": true,
-     "notes": "Looks good",
+     "label": false,
+     "notes": "piano not in the corner of the room",
      "src": "assets/a0139.png"
     }
    ],
@@ -2124,23 +2128,23 @@
      "src": "assets/a0142.png"
     },
     {
+     "label": true,
+     "notes": "Looks good",
+     "src": "assets/a0143.png"
+    },
+    {
+     "label": true,
+     "notes": "Looks good",
+     "src": "assets/a0144.png"
+    },
+    {
      "label": false,
      "notes": "There are chairs facing the shorter side of the table\npainting is oriented perpendicular to the wall",
-     "src": "assets/a0143.png"
+     "src": "assets/a0145.png"
     },
     {
      "label": false,
      "notes": "There are chairs facing the shorter side of the table\npainting and cabinet intersect\nthere is no buffet area",
-     "src": "assets/a0144.png"
-    },
-    {
-     "label": true,
-     "notes": "Looks good",
-     "src": "assets/a0145.png"
-    },
-    {
-     "label": true,
-     "notes": "Looks good",
      "src": "assets/a0146.png"
     },
     {
@@ -2201,13 +2205,13 @@
      "src": "assets/a0151.png"
     },
     {
-     "label": false,
-     "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+     "label": true,
+     "notes": "Looks good!",
      "src": "assets/a0152.png"
     },
     {
-     "label": true,
-     "notes": "Looks good!",
+     "label": false,
+     "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
      "src": "assets/a0153.png"
     },
     {
@@ -2273,13 +2277,13 @@
    "prompt_source": "",
    "dev_examples": [
     {
-     "label": false,
-     "notes": "title is out of bounds\nSparrows are not scattered across the cover",
+     "label": true,
+     "notes": "Looks good!",
      "src": "assets/a0160.png"
     },
     {
-     "label": false,
-     "notes": "title is out of bounds",
+     "label": true,
+     "notes": "Looks good!",
      "src": "assets/a0161.png"
     },
     {
@@ -2288,13 +2292,13 @@
      "src": "assets/a0162.png"
     },
     {
-     "label": false,
-     "notes": "Sparrows are not scattered across the cover",
+     "label": true,
+     "notes": "Looks good!",
      "src": "assets/a0163.png"
     },
     {
      "label": false,
-     "notes": "title is out of bounds",
+     "notes": "title is out of bounds\nSparrows are not scattered across the cover",
      "src": "assets/a0164.png"
     },
     {
@@ -2303,23 +2307,23 @@
      "src": "assets/a0165.png"
     },
     {
-     "label": true,
-     "notes": "Looks good!",
+     "label": false,
+     "notes": "Sparrows are not scattered across the cover",
      "src": "assets/a0166.png"
     },
     {
      "label": false,
-     "notes": "Sparrows are not scattered across the cover",
+     "notes": "title is out of bounds",
      "src": "assets/a0167.png"
     },
     {
-     "label": true,
-     "notes": "Looks good!",
+     "label": false,
+     "notes": "title is out of bounds",
      "src": "assets/a0168.png"
     },
     {
-     "label": true,
-     "notes": "Looks good!",
+     "label": false,
+     "notes": "Sparrows are not scattered across the cover",
      "src": "assets/a0169.png"
     }
    ],
@@ -2395,13 +2399,13 @@
      "src": "assets/a0177.png"
     },
     {
-     "label": false,
-     "notes": "One of the people images is not white colored",
+     "label": true,
+     "notes": "Looks good!",
      "src": "assets/a0178.png"
     },
     {
-     "label": true,
-     "notes": "Looks good!",
+     "label": false,
+     "notes": "One of the people images is not white colored",
      "src": "assets/a0179.png"
     }
    ],
@@ -2707,6 +2711,12 @@
       el("devstrip").replaceChildren(...dev.map((ex, i) => {
         const card = document.createElement("div");
         card.className = "devcard " + (ex.label ? "t" : "f");
+
+        const verdict = document.createElement("div");
+        verdict.className = "verdict " + (ex.label ? "t" : "f");
+        verdict.textContent = ex.label ? "True" : "False";
+        card.append(verdict);
+
         const src = OFFLINE
           ? ex.src
           : (ex.has_image ? `/api/dev_image?chapter=${chap.index}&i=${ex.i}` : null);
@@ -2718,15 +2728,14 @@
             openLightbox(src, `${ex.label ? "True" : "False"} - ${ex.notes || "no note"}`));
           card.append(img);
         }
-        const verdict = document.createElement("div");
-        verdict.className = "verdict " + (ex.label ? "t" : "f");
-        verdict.textContent = ex.label ? "True" : "False";
-        card.append(verdict);
         if (ex.notes) {
+          const head = document.createElement("div");
+          head.className = "noteshead";
+          head.textContent = "Notes";
           const notes = document.createElement("div");
           notes.className = "notes";
           notes.textContent = ex.notes;
-          card.append(notes);
+          card.append(head, notes);
         }
         return card;
       }));
