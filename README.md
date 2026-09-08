@@ -1,0 +1,85 @@
+# Layout labeling study
+
+Thanks for helping with this. It should take about 16-26 minutes.
+
+## Open it
+
+Just open the link you were sent. It runs in your browser; there is nothing to install.
+
+## You are identified by your link
+
+Your link ends in `?p=` followed by your id, and the page shows it at the top. That is how your
+answers are attributed, so please use the link that was sent to you rather than someone else's.
+
+## What you are judging
+
+You will see **120 layouts -- some 2D posters and book covers, some 3D rooms**, one at a time, in random order. For each one, decide a single
+question: *does this layout do what the brief asked for?*
+
+- **True** -- yes, it satisfies the brief.
+- **False** -- no, something the brief asked for is wrong, missing, or broken.
+
+The 120 items are in random order, and they come from several different tasks --
+the brief above each one tells you what that particular item was asked to do. Judge each item on its
+own, against its own brief.
+
+### What to judge against
+
+**Task brief** sits at the top right and is always on screen -- it does not fold away, because it is
+what every verdict is measured against. It is the instruction the layout was generated from, and it
+is the definition of "correct" here.
+
+Below it, **Dev set examples (10)** starts collapsed; click the heading to open it. These are
+10 layouts for this *same* brief that were judged earlier, each marked True or False **with the
+reason**. They set the bar, so when a call feels borderline, match how these were judged rather than
+inventing your own threshold. Click a thumbnail to enlarge it.
+
+## Labeling
+
+Click the True / False buttons, or use the keyboard -- it is much faster:
+
+| key | action |
+|-----|--------|
+| `t` | True |
+| `f` | False |
+| `u` | back to unlabeled (to undo a call) |
+| `->` | next item |
+| `<-` | previous item |
+
+With **Auto-advance** on (the default) marking an item moves you straight to the next one, so a whole
+pass is just `t` and `f`. Marking something *unlabeled* deliberately stays put, since that is a
+correction rather than a verdict.
+
+Everything starts unlabeled. Nothing is guessed or pre-filled for you, so a blank item means you have
+genuinely not judged it yet.
+
+## Progress, and stopping partway
+
+The counters at the top show how many you have done and your running True/False split. **Next
+unlabeled** jumps to the next item you have not judged, wrapping around at the end.
+
+Your progress is saved in your browser as you go, so you can close the tab and come back to where you
+left off. Two caveats:
+
+- **Use your own computer, or your own browser profile.** Progress is stored per browser, so two
+  people labeling in the same profile would share -- and overwrite -- each other's answers.
+- Do not use your browser's private/incognito mode; it discards the saved progress on exit.
+
+## When you are finished
+
+Nothing to do -- your answers are saved as you go. You can simply close the tab.
+
+### What is recorded
+
+Your id from the link, which items you judged, your True/False call on each, and how long you spent
+on each item. Nothing else: no name beyond that id, no email, no browsing activity. Your answers are
+also kept in your own browser, so a dropped connection cannot lose them -- the page re-sends anything
+that did not get through, and the counter at the top tells you if any are still waiting.
+
+If that counter is stuck on a number when you finish, click **Download JSON** and send us the file
+instead.
+
+## If something looks wrong
+
+An item that shows no image, or a brief that looks unrelated to what you see, is a bug on our side
+and not a layout to mark False. Leave it unlabeled and tell us the item id shown next to **Go to**.
