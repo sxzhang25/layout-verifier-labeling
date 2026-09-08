@@ -56,7 +56,9 @@
                 align-items: stretch; }
     /* A 2px verdict-coloured border so True and False are separable at a glance, and True cards
        come first, so the strip reads "right looks like this, wrong looks like this". */
-    .devcard { flex: 0 0 340px; border: 2px solid #e5e7eb; border-radius: 6px; background: #fff;
+    /* Wide enough that a square scene3d render fills the 400px image box instead of being
+       letterboxed to its width -- at 340px the images rendered 340x340 in a 340x400 slot. */
+    .devcard { flex: 0 0 420px; border: 2px solid #e5e7eb; border-radius: 6px; background: #fff;
                padding: 0.4rem; display: flex; flex-direction: column; }
     .devcard.t { border-color: #16a34a; }
     .devcard.f { border-color: #dc2626; }
@@ -127,39 +129,38 @@
   <div class="wrap">
     <!-- Landing -->
     <section class="landing" id="view-landing">
-      <h2>What you will be doing</h2>
+      <p>
+      Thank you for helping with this user study! This should take about 15-20 minutes total. Instructions are below.
+      </p>
+      <h2>Instructions</h2>
       <p>
         You will be shown computer-generated layouts and asked to judge each one <b>True</b> or
-        <b>False</b>. The work is split into a handful of tasks, with <b>20 layouts to label in
-        each</b>.
+        <b>False</b>. The work is split into separate layout tasks, with <b>20 layouts</b> in each task.
       </p>
       <p>
-        The work is grouped into sections, one per task. At the top of each section you will find a
-        <b>task description</b> &mdash; the instruction the layouts were generated from &mdash; and a
-        <b>set of dev-set examples</b>: layouts for that same task that have already been judged,
+        At the top of each section you will find a
+        <b>task description</b> describing the criteria for the layouts; and a
+        <b>dev set of examples</b>: layouts for that same task that have already been labeled,
         each shown with its True or False verdict and a note explaining why.
       </p>
       <p>
         For each unlabeled layout, assign <b>True</b> or <b>False</b> based on the task description
-        <b>and</b> the dev-set examples. The examples matter as much as the description: they show
-        where the line was drawn for that task, so when a call feels borderline, judge it the way
-        comparable examples were judged rather than applying your own threshold.
+        <i>and</i> the dev-set examples.
       </p>
 
       <div id="guidelines"></div>
 
-      <h2>Getting through it</h2>
+      <h2>Shortcuts</h2>
       <ol>
-        <li>Use <b>t</b> for True and <b>f</b> for False &mdash; much faster than clicking. Arrow
-          keys move between layouts, and <b>u</b> clears a verdict if you change your mind.</li>
+        <li>You can use <b>t</b> for True and <b>f</b> for False. Arrow
+          keys move between layouts, and <b>u</b> resets a verdict.</li>
         <li>Your answers save as you go. You can stop and come back to where you left off.</li>
         <li>You can move between sections at any time using the links at the top.</li>
       </ol>
 
       <h2>Before you start</h2>
       <p>
-        Enter your name or initials. This is how your answers are identified, so please use the same
-        one if you come back later.
+        Enter your name or initials prior to starting.
       </p>
       <div class="row">
         <label for="annotator"><b>Name or initials</b></label>
