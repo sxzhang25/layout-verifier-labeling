@@ -8,20 +8,21 @@ Just open the link you were sent. It runs in your browser; there is nothing to i
 
 ## You are identified by your link
 
-Your link ends in `?p=` followed by your id, and the page shows it at the top. That is how your
-answers are attributed, so please use the link that was sent to you rather than someone else's.
+Your link ends in `?p=` followed by your id, and the landing page fills it in for you. That is how
+your answers are attributed, so please use the link that was sent to you rather than someone
+else's.
 
 ## What you are judging
 
-You will see **120 layouts -- some 2D posters and book covers, some 3D rooms**, one at a time. For each one, decide a single question:
-*does this layout do what its task description asked for?*
+You will be judging **layouts -- some 2D posters and book covers, some 3D rooms**, one at a time. There are **6 tasks**, with **20
+layouts to label in each**. For each one, decide a single question: *does this layout do what its
+task description asked for?*
 
 - **True** -- yes, it satisfies the brief.
 - **False** -- no, something the brief asked for is wrong, missing, or broken.
 
-The 120 layouts are grouped into **sections, one per task**, and shuffled within each section.
-You can move between sections at any time using the links at the top of the page, and the page
-remembers where you were.
+Each task is its own **section**, and the layouts are shuffled within it. You can move between
+sections at any time using the links at the top of the page, and the page remembers where you were.
 
 ### What to judge against
 
@@ -39,9 +40,11 @@ your own threshold.
 
 ### What to look for
 
-**3D rooms** -- Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use.
+Judge **where things are**, not how they look. The system being evaluated chooses positions, sizes and orientations; it does not design the furniture or draw the pictures. So a layout with an ugly sofa or a low-quality illustration, placed correctly, is still True.
 
-**2D posters and book covers** -- Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements.
+**3D rooms** -- Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks -- its style, colour or model quality is not the layout's doing.
+
+**2D posters and book covers** -- Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements. Do not judge the images themselves -- their subject or quality is not the layout's doing, only where and how big they are.
 
 ## Labeling
 
@@ -80,13 +83,10 @@ Nothing to do -- your answers are saved as you go. You can simply close the tab.
 
 ### What is recorded
 
-Your id from the link, which items you judged, your True/False call on each, and how long you spent
-on each item. Nothing else: no name beyond that id, no email, no browsing activity. Your answers are
-also kept in your own browser, so a dropped connection cannot lose them -- the page re-sends anything
-that did not get through, and the counter at the top tells you if any are still waiting.
-
-If that counter is stuck on a number when you finish, click **Download JSON** and send us the file
-instead.
+The name or initials you entered, which layouts you judged, your True/False call on each, and how
+long you spent on each. Nothing else: no email, no browsing activity. Your answers are also kept in
+your own browser, so a dropped connection cannot lose them -- the page re-sends anything that did
+not get through, and tells you if any are still waiting.
 
 ## If something looks wrong
 

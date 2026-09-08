@@ -52,15 +52,20 @@
     .devwrap h2 { margin: 0 0 0.5rem; font-size: 0.78rem; font-weight: 600; color: #374151;
                   text-transform: uppercase; letter-spacing: 0.04em; }
     .devwrap h2 span { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b7280; }
-    .devstrip { display: flex; gap: 0.55rem; overflow-x: auto; padding-bottom: 0.35rem; }
-    .devcard { flex: 0 0 140px; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff;
-               padding: 0.35rem; }
-    .devcard img { width: 100%; height: 130px; object-fit: contain; background: #fff;
+    .devstrip { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.4rem;
+                align-items: stretch; }
+    /* A 2px verdict-coloured border so True and False are separable at a glance, and True cards
+       come first, so the strip reads "right looks like this, wrong looks like this". */
+    .devcard { flex: 0 0 340px; border: 2px solid #e5e7eb; border-radius: 6px; background: #fff;
+               padding: 0.4rem; display: flex; flex-direction: column; }
+    .devcard.t { border-color: #16a34a; }
+    .devcard.f { border-color: #dc2626; }
+    .devcard img { width: 100%; height: 400px; object-fit: contain; background: #fff;
                    cursor: zoom-in; }
-    .devcard .verdict { font-size: 0.74rem; font-weight: 600; margin-top: 0.25rem; }
+    .devcard .verdict { font-size: 0.8rem; font-weight: 700; margin-top: 0.3rem; }
     .devcard .verdict.t { color: #166534; }
     .devcard .verdict.f { color: #b91c1c; }
-    .devcard .notes { font-size: 0.71rem; color: #4b5563; line-height: 1.35; }
+    .devcard .notes { font-size: 0.76rem; color: #374151; line-height: 1.4; white-space: pre-wrap; }
 
     /* Zoomed dev example, as an overlay so the strip does not reflow. */
     .lightbox { position: fixed; inset: 0; background: rgba(17,24,39,0.82); z-index: 50;
@@ -124,8 +129,9 @@
     <section class="landing" id="view-landing">
       <h2>What you will be doing</h2>
       <p>
-        You will be shown a series of computer-generated layouts and asked to judge each one
-        <b>True</b> or <b>False</b>.
+        You will be shown computer-generated layouts and asked to judge each one <b>True</b> or
+        <b>False</b>. The work is split into a handful of tasks, with <b>20 layouts to label in
+        each</b>.
       </p>
       <p>
         The work is grouped into sections, one per task. At the top of each section you will find a
@@ -150,7 +156,21 @@
         <li>You can move between sections at any time using the links at the top.</li>
       </ol>
 
-      <div class="startrow"><button type="button" id="btn-start">Start</button></div>
+      <h2>Before you start</h2>
+      <p>
+        Enter your name or initials. This is how your answers are identified, so please use the same
+        one if you come back later.
+      </p>
+      <div class="row">
+        <label for="annotator"><b>Name or initials</b></label>
+        <input type="text" id="annotator" size="20" placeholder="e.g. AB"
+               autocomplete="off" spellcheck="false" />
+        <span class="hint" id="annotator-note"></span>
+      </div>
+
+      <div class="startrow">
+        <button type="button" id="btn-start" disabled>Start</button>
+      </div>
       <p class="hint" id="landing-note"></p>
     </section>
 
@@ -198,9 +218,6 @@
               Auto-advance after labeling</label>
           </div>
           <div class="status" id="status"></div>
-          <div class="row">
-            <button type="button" id="btn-download" class="hidden">Download JSON</button>
-          </div>
           <div class="mono" id="session-path"></div>
         </div>
       </div>
@@ -212,17 +229,9 @@
       <p class="hint" id="done-note"></p>
       <div class="row" style="justify-content:center;">
         <button type="button" id="btn-review">Back to the last section</button>
-        <button type="button" id="btn-download-done" class="hidden">Download JSON</button>
       </div>
     </section>
 
-    <!-- The annotator id. Only shown when the link did not carry one. -->
-    <div class="row hidden" id="annotator-row">
-      <label for="annotator"><b>Your name or initials</b></label>
-      <input type="text" id="annotator" size="18" placeholder="e.g. AB"
-             autocomplete="off" spellcheck="false" />
-      <span class="hint" id="annotator-note"></span>
-    </div>
   </div>
 
   
@@ -2416,14 +2425,15 @@
   {
    "domain": "scene3d",
    "title": "3D rooms",
-   "text": "Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use."
+   "text": "Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks -- its style, colour or model quality is not the layout's doing."
   },
   {
    "domain": "poster2d",
    "title": "2D posters and book covers",
-   "text": "Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements."
+   "text": "Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements. Do not judge the images themselves -- their subject or quality is not the layout's doing, only where and how big they are."
   }
- ]
+ ],
+ "scope_note": "Judge **where things are**, not how they look. The system being evaluated chooses positions, sizes and orientations; it does not design the furniture or draw the pictures. So a layout with an ugly sofa or a low-quality illustration, placed correctly, is still True."
 }</script>
   
   <script>
@@ -2609,12 +2619,35 @@
       el("chapnav").replaceChildren(...nodes);
     }
 
+    // Bold spans in the scope note come through as **...** from Python; render them rather than
+    // dumping the markers on screen.
+    function withBold(text) {
+      const frag = document.createDocumentFragment();
+      text.split(/\*\*/).forEach((chunk, i) => {
+        if (i % 2 === 1) {
+          const b = document.createElement("b");
+          b.textContent = chunk;
+          frag.append(b);
+        } else if (chunk) {
+          frag.append(document.createTextNode(chunk));
+        }
+      });
+      return frag;
+    }
+
     function renderGuidelines() {
       const host = el("guidelines");
       const guides = state.meta.guidelines || [];
-      if (!guides.length) { host.replaceChildren(); return; }
+      const scope = state.meta.scope_note || "";
       const head = document.createElement("h2");
       head.textContent = "What to look for";
+      if (!guides.length && !scope) { host.replaceChildren(); return; }
+      if (!guides.length) {
+        const p = document.createElement("p");
+        p.append(withBold(scope));
+        host.replaceChildren(head, p);
+        return;
+      }
       const cards = guides.map((g) => {
         const box = document.createElement("div");
         box.className = "guide";
@@ -2625,7 +2658,9 @@
         box.append(b, span);
         return box;
       });
-      host.replaceChildren(head, ...cards);
+      const scopeP = document.createElement("p");
+      scopeP.append(withBold(scope));
+      host.replaceChildren(head, scopeP, ...cards);
     }
 
     function openLightbox(src, caption) {
@@ -2647,18 +2682,16 @@
       el("task-prompt").textContent = chap.prompt || "(no description found)";
 
       const dev = chap.dev_examples || [];
-      el("dev-title").innerHTML =
-        `Dev set examples <span>&mdash; ${dev.length} already judged, with reasons</span>`;
+      el("dev-title").textContent = "Dev set examples";
       el("dev-note").textContent = dev.length ? "" : (chap.dev_error || "No examples for this task.");
       el("dev-note").classList.toggle("hidden", dev.length > 0);
 
       el("devstrip").replaceChildren(...dev.map((ex, i) => {
         const card = document.createElement("div");
-        card.className = "devcard";
+        card.className = "devcard " + (ex.label ? "t" : "f");
         const src = OFFLINE
           ? ex.src
-          : (ex.has_image
-              ? `/api/dev_image?item=${encodeURIComponent(chap.dev_item)}&i=${ex.i}` : null);
+          : (ex.has_image ? `/api/dev_image?chapter=${chap.index}&i=${ex.i}` : null);
         if (src) {
           const img = document.createElement("img");
           img.src = src;
@@ -2714,12 +2747,10 @@
     function renderProgress() {
       const chap = chapter();
       const { total, done } = chapterCount(state.chapter);
-      const all = state.items.filter(decided).length;
       el("prog").innerHTML =
         `Section <b>${state.chapter + 1}</b> of ${state.chapters.length} &nbsp;&middot;&nbsp; ` +
         `<b>${chap.label}</b><br>` +
-        `Layout <b>${state.pos + 1}</b> of ${total} &nbsp;&middot;&nbsp; ${done} labeled here<br>` +
-        `<span class="hint">${all} of ${state.items.length} labeled overall</span>`;
+        `Layout <b>${state.pos + 1}</b> of ${total} &nbsp;&middot;&nbsp; ${done} labeled here`;
       el("bar-fill").style.width = `${(done / Math.max(1, total)) * 100}%`;
       el("btn-prev").disabled = state.pos === 0 && state.chapter === 0;
       el("btn-next").disabled =
@@ -2801,11 +2832,9 @@
     }
 
     function renderDone() {
-      const all = state.items.filter(decided).length;
       el("done-note").textContent = ENDPOINT
-        ? `All ${all} answers are saved and uploaded. You can close the tab.`
-        : `All ${all} answers are saved in this browser. Click Download JSON and send us the file.`;
-      el("btn-download-done").classList.toggle("hidden", !OFFLINE);
+        ? "Your answers are saved and uploaded. You can close the tab."
+        : "Your answers are saved in this browser.";
       renderChapNav();
     }
 
@@ -2857,36 +2886,20 @@
       }
     }
 
-    function download() {
-      const who = annotatorId();
-      if (!who) {
-        setStatus("Put your name or initials in the box below first.", false);
-        el("annotator-row").classList.remove("hidden");
-        el("annotator").focus();
-        return;
-      }
-      const labels = {};
-      for (const item of state.items) {
-        if (decided(item)) labels[item.item_id] = item.label;
-      }
-      const done = Object.keys(labels).length;
-      if (done < state.items.length &&
-          !confirm(`${state.items.length - done} layout(s) are still unlabeled. Download anyway?`)) {
-        return;
-      }
-      const payload = { session_id: state.meta.session_id, annotator: who, labels };
-      const url = URL.createObjectURL(
-        new Blob([JSON.stringify(payload, null, 2) + "\n"], { type: "application/json" }));
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `${state.meta.session_id}__${who}_labels.json`;
-      a.click();
-      URL.revokeObjectURL(url);
-      setStatus(`Downloaded ${done} answer(s).`, true);
-    }
-
     // --- wiring --------------------------------------------------------------
-    el("btn-start").addEventListener("click", () => goChapter(firstUnfinishedChapter()));
+    function syncStart() {
+      const who = annotatorId();
+      // Gated because the id is the only thing tying answers to a person: a pass labeled by nobody
+      // cannot be attributed after the fact.
+      el("btn-start").disabled = !who;
+      el("annotator-note").textContent = who ? `saved as "${who}"` : "required";
+      el("who").textContent = who || "";
+      if (OFFLINE && who) localStorage.setItem(ANNOTATOR_KEY, who);
+    }
+    el("btn-start").addEventListener("click", () => {
+      if (!annotatorId()) { el("annotator").focus(); return; }
+      goChapter(firstUnfinishedChapter());
+    });
     el("btn-true").addEventListener("click", () => saveLabel(1));
     el("btn-false").addEventListener("click", () => saveLabel(0));
     el("btn-unlabel").addEventListener("click", () => saveLabel(-1));
@@ -2895,14 +2908,7 @@
     el("btn-next-unlabeled").addEventListener("click", nextUnlabeled);
     el("btn-next-chapter").addEventListener("click", () => goChapter(state.chapter + 1));
     el("btn-review").addEventListener("click", () => goChapter(state.chapter));
-    el("btn-download").addEventListener("click", download);
-    el("btn-download-done").addEventListener("click", download);
-    el("annotator").addEventListener("input", (ev) => {
-      const who = cleanAnnotator(ev.target.value);
-      if (OFFLINE) localStorage.setItem(ANNOTATOR_KEY, who);
-      el("annotator-note").textContent = who ? `saved as "${who}"` : "";
-      el("who").textContent = who || "";
-    });
+    el("annotator").addEventListener("input", syncStart);
 
     document.addEventListener("keydown", (ev) => {
       const target = ev.target || {};
@@ -2915,7 +2921,9 @@
         return;
       }
       if (state.view === "landing" && (ev.key === "Enter" || ev.key === " ")) {
-        el("btn-start").click(); ev.preventDefault(); return;
+        if (!el("btn-start").disabled) el("btn-start").click();
+        ev.preventDefault();
+        return;
       }
       if (state.view !== "task") return;
       if (ev.key === "ArrowLeft") { step(-1); ev.preventDefault(); }
@@ -2948,20 +2956,11 @@
         return;
       }
 
-      const who = loadAnnotator();
-      el("annotator").value = who;
-      el("who").textContent = who || "";
-      if (OFFLINE) {
-        el("btn-download").classList.remove("hidden");
-        if (!PARAM_ID && !who) {
-          // No id from the link and none remembered: ask, since the download is named after it.
-          el("annotator-row").classList.remove("hidden");
-          el("annotator-note").textContent = "needed before you can send your answers back";
-        }
-      }
+      el("annotator").value = loadAnnotator();
+      syncStart();
       el("landing-note").textContent = ENDPOINT
         ? "Your answers upload automatically as you go."
-        : "Your answers stay in this browser until you send them back.";
+        : "Your answers are kept in this browser as you go.";
 
       renderGuidelines();
       const place = loadPlace();

@@ -2184,12 +2184,13 @@
     {
       "domain": "scene3d",
       "title": "3D rooms",
-      "text": "Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use."
+      "text": "Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks -- its style, colour or model quality is not the layout's doing."
     },
     {
       "domain": "poster2d",
       "title": "2D posters and book covers",
-      "text": "Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements."
+      "text": "Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements. Do not judge the images themselves -- their subject or quality is not the layout's doing, only where and how big they are."
     }
-  ]
+  ],
+  "scope_note": "Judge **where things are**, not how they look. The system being evaluated chooses positions, sizes and orientations; it does not design the furniture or draw the pictures. So a layout with an ugly sofa or a low-quality illustration, placed correctly, is still True."
 }
