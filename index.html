@@ -39,17 +39,22 @@
     .status.ok { color: #166534; }
 
     /* The brief, full width, directly under the header. */
-    .brief { border: 1px solid #d1d5db; border-radius: 8px; padding: 0.7rem 0.9rem;
-             margin-bottom: 0.7rem; }
-    .brief h2 { margin: 0 0 0.45rem; font-size: 0.78rem; font-weight: 600; color: #374151;
-                text-transform: uppercase; letter-spacing: 0.04em; }
-    .brief p { margin: 0; font-size: 0.9rem; line-height: 1.55; white-space: pre-wrap;
-               word-break: break-word; }
+    /* Deliberately the loudest block on the page: it is the criterion every verdict is measured
+       against, and it competes for attention with a 500px gallery right underneath it. */
+    .brief { border: 1px solid #bfdbfe; border-left: 5px solid #1d4ed8; border-radius: 8px;
+             padding: 0.75rem 1rem; margin-bottom: 0.7rem; background: #eff6ff; }
+    .brief h2 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; color: #1d4ed8;
+                text-transform: uppercase; letter-spacing: 0.07em; }
+    .brief p { margin: 0; font-size: 1rem; font-weight: 500; line-height: 1.55;
+               white-space: pre-wrap; word-break: break-word; color: #111827; }
 
     /* Dev set: a horizontal scrolling gallery immediately below the brief. */
     .devwrap { border: 1px solid #e5e7eb; border-radius: 8px; background: #f9fafb;
                padding: 0.6rem 0.7rem 0.5rem; margin-bottom: 1rem; }
-    .devwrap h2 { margin: 0 0 0.5rem; font-size: 0.78rem; font-weight: 600; color: #374151;
+    .devhead { display: flex; align-items: baseline; gap: 0.6rem; margin-bottom: 0.5rem; }
+    #btn-dev-toggle { padding: 0.1rem 0.45rem; font-size: 0.72rem; color: #4b5563;
+                      border-color: #d1d5db; }
+    .devwrap h2 { margin: 0; font-size: 0.78rem; font-weight: 600; color: #374151;
                   text-transform: uppercase; letter-spacing: 0.04em; }
     .devwrap h2 span { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b7280; }
     .devstrip { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.4rem;
@@ -130,7 +135,7 @@
     <!-- Landing -->
     <section class="landing" id="view-landing">
       <p>
-      Thank you for helping with this user study! This should take about 15-20 minutes total. Instructions are below.
+      Thank you for helping with this user study! This should take about 15-20 minutes total.
       </p>
       <h2>Instructions</h2>
       <p>
@@ -183,7 +188,10 @@
       </div>
 
       <div class="devwrap" id="devwrap">
-        <h2 id="dev-title"></h2>
+        <div class="devhead">
+          <h2 id="dev-title"></h2>
+          <button type="button" id="btn-dev-toggle">click to collapse</button>
+        </div>
         <p class="hint hidden" id="dev-note"></p>
         <div class="devstrip" id="devstrip"></div>
       </div>
@@ -2677,6 +2685,12 @@
       document.body.append(box);
     }
 
+    function setDevCollapsed(collapsed) {
+      el("devstrip").classList.toggle("hidden", collapsed);
+      el("btn-dev-toggle").textContent = collapsed ? "click to expand" : "click to collapse";
+      el("btn-dev-toggle").setAttribute("aria-expanded", String(!collapsed));
+    }
+
     function renderChapter() {
       const chap = chapter();
       if (!chap) return;
@@ -2684,6 +2698,9 @@
 
       const dev = chap.dev_examples || [];
       el("dev-title").textContent = "Dev set examples";
+      // Reset on every chapter: a section's examples are its standard, so each new task starts by
+      // showing them even if the annotator collapsed the previous one.
+      setDevCollapsed(false);
       el("dev-note").textContent = dev.length ? "" : (chap.dev_error || "No examples for this task.");
       el("dev-note").classList.toggle("hidden", dev.length > 0);
 
@@ -2909,6 +2926,8 @@
     el("btn-next-unlabeled").addEventListener("click", nextUnlabeled);
     el("btn-next-chapter").addEventListener("click", () => goChapter(state.chapter + 1));
     el("btn-review").addEventListener("click", () => goChapter(state.chapter));
+    el("btn-dev-toggle").addEventListener("click", () =>
+      setDevCollapsed(!el("devstrip").classList.contains("hidden")));
     el("annotator").addEventListener("input", syncStart);
 
     document.addEventListener("keydown", (ev) => {
