@@ -59,16 +59,18 @@
     .devwrap h2 span { text-transform: none; letter-spacing: 0; font-weight: 400; color: #6b7280; }
     .devstrip { display: flex; gap: 0.6rem; overflow-x: auto; padding-bottom: 0.4rem;
                 align-items: stretch; }
-    /* Unframed, like every other section: the verdict is carried by the *text* colour instead, so
-       every word in a card is green or red and the strip stays flat.
+    /* A neutral hairline frame, deliberately not verdict-coloured: the True/False signal is carried
+       by the *text* colour, so every word in a card is green or red while the frame just separates
+       one example from the next.
        Wide enough that a square scene3d render fills the image box rather than being letterboxed to
        its width -- at 340px the images rendered 340x340 in a 340x400 slot. */
-    .devcard { flex: 0 0 420px; background: #fff; padding: 0.4rem 0.4rem 0.2rem;
+    .devcard { flex: 0 0 420px; background: #fff; padding: 0.45rem 0.45rem 0.25rem;
+               border: 1px solid #e5e7eb; border-radius: 6px;
                display: flex; flex-direction: column; }
     .devcard.t, .devcard.t .verdict, .devcard.t .noteshead, .devcard.t .notes { color: #166534; }
     .devcard.f, .devcard.f .verdict, .devcard.f .noteshead, .devcard.f .notes { color: #b91c1c; }
     .devcard img { width: 100%; height: 360px; object-fit: contain; background: #fff;
-                   cursor: zoom-in; }
+                   border: 1px solid #e5e7eb; cursor: zoom-in; }
     /* The verdict leads the card, at the same size as the task description, so the strip can be
        read as "these are right, these are wrong" without inspecting each caption. */
     .devcard .verdict { font-size: 1rem; font-weight: 700; text-align: center;
@@ -92,7 +94,8 @@
     .box { padding: 0; background: #fff; }
     .preview { min-height: 420px; display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center;
                justify-content: center; padding: 0; }
-    .preview img { max-width: 100%; max-height: 74vh; object-fit: contain; background: #fff; }
+    .preview img { max-width: 100%; max-height: 74vh; object-fit: contain; background: #fff;
+                   border: 1px solid #e5e7eb; }
     .preview.two img { max-width: 48%; }
     .preview-error { color: #b91c1c; font-size: 0.8rem; }
 
