@@ -43,11 +43,11 @@ your own threshold.
 
 ### What to look for
 
-Judge **where things are**, not how they look. The system being evaluated chooses positions, sizes and orientations; it does not design the furniture or draw the pictures. So a layout with an ugly sofa or a low-quality illustration, placed correctly, is still True.
+Judge **how things are placed**, not how they look. You should evaluate what types of objects are present and how they are arranged.
 
-**3D rooms** -- Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks -- its style, colour or model quality is not the layout's doing.
+**3D rooms** -- Beyond the task description, also evaluate the general goodness of the room: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use. Do not judge how the furniture itself looks, e.g. its style, colour or model quality.
 
-**2D posters and book covers** -- Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements. Do not judge the images themselves -- their subject or quality is not the layout's doing, only where and how big they are.
+**2D posters and book covers** -- Beyond the task description, also evaluate the general goodness of the design: whether it is legible, whether anything runs off the edge of the page, whether text is rotated oddly or overlaps other elements, etc. Do not judge the appearance or quality of the images themselves
 
 ## Labeling
 
