@@ -13,26 +13,35 @@ answers are attributed, so please use the link that was sent to you rather than 
 
 ## What you are judging
 
-You will see **120 layouts -- some 2D posters and book covers, some 3D rooms**, one at a time, in random order. For each one, decide a single
-question: *does this layout do what the brief asked for?*
+You will see **120 layouts -- some 2D posters and book covers, some 3D rooms**, one at a time. For each one, decide a single question:
+*does this layout do what its task description asked for?*
 
 - **True** -- yes, it satisfies the brief.
 - **False** -- no, something the brief asked for is wrong, missing, or broken.
 
-The 120 items are in random order, and they come from several different tasks --
-the brief above each one tells you what that particular item was asked to do. Judge each item on its
-own, against its own brief.
+The 120 layouts are grouped into **sections, one per task**, and shuffled within each section.
+You can move between sections at any time using the links at the top of the page, and the page
+remembers where you were.
 
 ### What to judge against
 
-**Task brief** sits at the top right and is always on screen -- it does not fold away, because it is
-what every verdict is measured against. It is the instruction the layout was generated from, and it
-is the definition of "correct" here.
+Each section shows two things above the layouts, and both stay on screen the whole time:
 
-Below it, **Dev set examples (10)** starts collapsed; click the heading to open it. These are
-10 layouts for this *same* brief that were judged earlier, each marked True or False **with the
-reason**. They set the bar, so when a call feels borderline, match how these were judged rather than
-inventing your own threshold. Click a thumbnail to enlarge it.
+* **Task description** -- the instruction the layouts in that section were generated from. This is
+  the definition of "correct" for them.
+* **Dev set examples (10)** -- 10 layouts for that *same* task that were judged earlier,
+  each marked True or False **with the reason**. Scroll the strip sideways to see them all, and click
+  any thumbnail to enlarge it.
+
+The examples matter as much as the description. They show where the line was drawn for that task, so
+when a call feels borderline, judge it the way comparable examples were judged rather than applying
+your own threshold.
+
+### What to look for
+
+**3D rooms** -- Beyond what the brief asks for, also weigh the general soundness of the layout: objects that intersect each other or stick out of the room, and furniture placed in ways that do not make sense to walk around or use.
+
+**2D posters and book covers** -- Beyond what the brief asks for, also weigh whether the text works: whether it is legible, whether anything runs off the edge of the page, and whether text is rotated oddly or overlaps other elements.
 
 ## Labeling
 
