@@ -1,6 +1,6 @@
 # Layout labeling study
 
-Thanks for helping with this. It should take about 16-26 minutes.
+Thanks for helping with this. It should take about 8-13 minutes.
 
 ## Open it
 
@@ -17,7 +17,7 @@ Two people entering the same initials would have their answers pooled together.
 
 ## What you are judging
 
-You will be judging **layouts -- some 2D posters and book covers, some 3D rooms**, one at a time. There are **6 tasks**, with **20
+You will be judging **layouts -- some 2D posters and book covers, some 3D rooms**, one at a time. There are **6 tasks**, with **10
 layouts to label in each**. For each one, decide a single question: *does this layout do what its
 task description asked for?*
 

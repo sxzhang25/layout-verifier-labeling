@@ -1,1104 +1,12 @@
 {
-  "session_id": "study_scene3d-poster2d_t6_n20_seed0",
+  "session_id": "study_scene3d-poster2d_t6_n10_seed0",
   "domain": "scene3d+poster2d",
   "task": null,
   "annotator": "",
-  "n_items": 120,
+  "n_items": 60,
   "items": [
     {
       "item_id": "000",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ac2f3ef2ba3d0.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "001",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a839f5c00dcf2.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "002",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a4f67f5b3c791.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "003",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a8c5fe3e50a29.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "004",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a47ee0beab66c.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "005",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a648663955bfd.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "006",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aba9108b623b0.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "007",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ad51d674bb037.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "008",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7d33023dc85c.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "009",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1544e28af74d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "010",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ad0ceace8bc3d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "011",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aba2d878ace57.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "012",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a9d0af2c32053.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "013",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ad23ee45b9666.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "014",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a2efa5405da69.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "015",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a0a412dbc2036.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "016",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a205e8095f4ef.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "017",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a86a5b85786e1.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "018",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a0c482cf8cd98.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "019",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a39bccf90a865.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "020",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a980b27322b4a.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "021",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a5c995cb7baa3.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "022",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a8cf83b2d3feb.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "023",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a824b6b3b0ae6.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "024",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a6483b4bdd315.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "025",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a0ec1fdac873d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "026",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ad250f6bd80ee.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "027",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a81aaf9c0ea42.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "028",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a83e609bca1f4.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "029",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a8c3124c995f6.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "030",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a3f3fe13a4852.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "031",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a9eb0b9852881.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "032",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a16a5db3e7db7.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "033",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a4685d9001fad.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "034",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1bc1d6241982.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "035",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a113b635d7f29.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "036",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/af485d1e9c009.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "037",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a3f0cb38ac011.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "038",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a6c4ff2a0b1ba.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "039",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a970eed5127c9.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "040",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a27a71f5ab075.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "041",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a212aafaf9f5d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "042",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a54967eb3f40a.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "043",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a32b34db2ce3f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "044",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7c435f87e8a2.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "045",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a27a4ec5df9ac.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "046",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a4c023e9c8b17.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "047",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ae66e6232d59f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "048",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7f10e74b5885.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "049",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/af7ebf76ffb9d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "050",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ab1e82b3a92b8.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "051",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a00dcf991e5fe.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "052",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a848b34bfa871.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "053",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ac92f97a97cd2.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "054",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aaa0de31faa50.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "055",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/af5f9503cb5f6.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "056",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a2a3fd135846e.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "057",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aaa0eafdcf2d0.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "058",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/af7b7fa41f12d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "059",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a22a0931ec18d.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "060",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a60d3ea27aac1.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "061",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a2dfb3216dfab.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "062",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a069354f7d8dc.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "063",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a541f58b6c4f4.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "064",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7d72d323870e.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "065",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a62542dfb2f7a.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "066",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a15d3ed6d83ce.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "067",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a47946f7233fb.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "068",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a27caf427b525.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "069",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a6baafae8db8e.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "070",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a18ce0b83fc7e.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "071",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aee53c3dcbdb3.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "072",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aff029981fd44.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "073",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a888d2572148c.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "074",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a8c0c6aea899f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "075",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a81fc378e50b3.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "076",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1d8238715e52.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "077",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a4af17f3b878f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "078",
       "task": "task4",
       "domain": "scene3d",
       "label": null,
@@ -1112,7 +20,7 @@
       ]
     },
     {
-      "item_id": "079",
+      "item_id": "001",
       "task": "task2",
       "domain": "poster2d",
       "label": null,
@@ -1120,13 +28,167 @@
         {
           "i": 0,
           "label": "view 1",
-          "src": "assets/ab5fa5321a068.png",
+          "src": "assets/a052b0b1c3577.png",
           "kind": "image"
         }
       ]
     },
     {
-      "item_id": "080",
+      "item_id": "002",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a8cf83b2d3feb.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "003",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/acabbb60104cd.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "004",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aa5e0581e99b6.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "005",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aaa0de31faa50.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "006",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a3c8186640986.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "007",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a646b28a1c864.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "008",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a2a3fd135846e.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "009",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a3d38c3c3852f.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "010",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a6cb2a7f44239.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "011",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a903b72d50c9d.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "012",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a6c8b021acc2c.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "013",
       "task": "task9",
       "domain": "scene3d",
       "label": null,
@@ -1140,525 +202,7 @@
       ]
     },
     {
-      "item_id": "081",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a149ad8138ad9.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "082",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a29b6a1596f98.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "083",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a38687c537a63.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "084",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a393b7b6c4216.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "085",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a0429fa84db7f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "086",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a27b1bef1461f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "087",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a49bea72ae7f9.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "088",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a383911d58028.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "089",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a37c0e3a5ccce.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "090",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ab733ee064453.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "091",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a81df77a79087.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "092",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a4e018ed594f5.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "093",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a3dec1e481732.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "094",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a54cf13a4673e.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "095",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a04a6c884075a.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "096",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ae33a22ccb964.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "097",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1dce386da7e6.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "098",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7175a1d4ba9c.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "099",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/af143f2c00adc.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "100",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ac48aa5c28757.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "101",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a2d0743b2725f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "102",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a93e65589f1f1.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "103",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ae57e47076070.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "104",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ae864e1ee99c3.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "105",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aa5ea90faf271.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "106",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ace76b588e837.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "107",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a446482b898c4.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "108",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a7806b97f76fd.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "109",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1fa30b10a87f.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "110",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a592ea47a55e7.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "111",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a5eb88e18aa36.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "112",
-      "task": "task2",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/afeea9ad94d42.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "113",
-      "task": "task4",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/ad4c922be07da.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "114",
-      "task": "task1c",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a1350ef6e6b4c.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "115",
-      "task": "task9",
-      "domain": "scene3d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/aea659b4f7ec9.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "116",
-      "task": "task6",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/a52203944ac92.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "117",
-      "task": "task3",
-      "domain": "poster2d",
-      "label": null,
-      "previews": [
-        {
-          "i": 0,
-          "label": "view 1",
-          "src": "assets/affaaf6602680.png",
-          "kind": "image"
-        }
-      ]
-    },
-    {
-      "item_id": "118",
+      "item_id": "014",
       "task": "task9",
       "domain": "scene3d",
       "label": null,
@@ -1672,7 +216,7 @@
       ]
     },
     {
-      "item_id": "119",
+      "item_id": "015",
       "task": "task6",
       "domain": "poster2d",
       "label": null,
@@ -1681,6 +225,622 @@
           "i": 0,
           "label": "view 1",
           "src": "assets/abdc6fa2c44de.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "016",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a7156e455de93.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "017",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/ac6a2a02a9a16.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "018",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a82d5186c057a.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "019",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/acca6e583aa97.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "020",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aeae6d76c6298.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "021",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a1f30d4a00bba.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "022",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a4556c9580426.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "023",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a5b0df1723630.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "024",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/ada7fe5a12c30.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "025",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a3100835e352e.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "026",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/acc06bfcebca4.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "027",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a68098935ac9a.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "028",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a2feeb1d27fc2.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "029",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aafd90dd1bb4f.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "030",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a70056a16e844.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "031",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a30809b558deb.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "032",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a782e37cba700.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "033",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aedf33225a427.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "034",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a0c6ee97fb18e.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "035",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a74b06ff8d044.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "036",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a8e57818164cc.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "037",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aef949a500aa8.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "038",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/add8f21a4f96a.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "039",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/af6bdcee2190a.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "040",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a70b4fc4fe480.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "041",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a8e3fcbc357a2.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "042",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a10207c8769f7.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "043",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a43226ded640c.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "044",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a28812b558958.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "045",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/aa5f6795301a3.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "046",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a49c663153cf9.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "047",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/af93517f82c2d.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "048",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a54cf13a4673e.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "049",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a8d66eb6a41dc.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "050",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a669697709279.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "051",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/ab6f08a30fef1.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "052",
+      "task": "task2",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/acd99dcc0e990.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "053",
+      "task": "task4",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a7d72d323870e.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "054",
+      "task": "task1c",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a29127f311815.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "055",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a648663955bfd.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "056",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a27a4ec5df9ac.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "057",
+      "task": "task3",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/a0397a4bf13ae.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "058",
+      "task": "task9",
+      "domain": "scene3d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/af170214d4099.png",
+          "kind": "image"
+        }
+      ]
+    },
+    {
+      "item_id": "059",
+      "task": "task6",
+      "domain": "poster2d",
+      "label": null,
+      "previews": [
+        {
+          "i": 0,
+          "label": "view 1",
+          "src": "assets/ab11983025e09.png",
           "kind": "image"
         }
       ]
@@ -1702,71 +862,61 @@
         {
           "label": true,
           "notes": "Looks good",
+          "src": "assets/ae2b34ad4bc88.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good",
+          "src": "assets/aabc7094720e4.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good",
           "src": "assets/acb6d88b7b403.png"
         },
         {
           "label": true,
           "notes": "Looks good",
-          "src": "assets/a310f89a1fcf7.png"
+          "src": "assets/a878af82a2140.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical\nwardrobe is out of bounds\ndresser and plant intersect",
-          "src": "assets/ad7962a4d3d96.png"
+          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
+          "src": "assets/aa8bd7346bf4a.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical",
-          "src": "assets/a57da9bb7d0a1.png"
-        },
-        {
-          "label": false,
-          "notes": "Nightstands are not identical\nnightstand and queen_bed intersect\nNightstands are not symmetrically placed",
-          "src": "assets/ac15cd7386196.png"
+          "notes": "Nightstands not placed at the head of the bed",
+          "src": "assets/a855e3e9aff38.png"
         },
         {
           "label": false,
           "notes": "Nightstands are not identical",
-          "src": "assets/adec5a6e2d227.png"
+          "src": "assets/a6c919e699115.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical\nplant and wardrobe intersect",
-          "src": "assets/a7156e455de93.png"
+          "notes": "Nightstands are not identical\nplant and wardrobe intersect\nNightstands are not symmetrically placed",
+          "src": "assets/ab4f927bcaef9.png"
         },
         {
           "label": false,
-          "notes": "Nightstands are not identical\nnightstand and queen_bed intersect",
-          "src": "assets/af84fb21ee26b.png"
-        },
-        {
-          "label": false,
-          "notes": "painting is out of bounds",
-          "src": "assets/aedf33225a427.png"
+          "notes": "Nightstands are not identical\nNightstands are not symmetrically placed",
+          "src": "assets/ae4db91be4d68.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "003",
-        "015",
-        "018",
-        "020",
-        "030",
+        "007",
+        "008",
+        "016",
+        "017",
+        "029",
+        "033",
         "036",
+        "040",
         "043",
-        "044",
-        "055",
-        "056",
-        "060",
-        "067",
-        "069",
-        "070",
-        "072",
-        "088",
-        "091",
-        "097",
-        "101",
-        "114"
+        "054"
       ]
     },
     {
@@ -1779,12 +929,12 @@
         {
           "label": true,
           "notes": "Looks good",
-          "src": "assets/ac2edff8a5fab.png"
+          "src": "assets/a40f0eac5e849.png"
         },
         {
           "label": true,
           "notes": "Looks good",
-          "src": "assets/acb5e71c85e0d.png"
+          "src": "assets/a12bad2eead10.png"
         },
         {
           "label": true,
@@ -1798,57 +948,47 @@
         },
         {
           "label": false,
-          "notes": "chairs angled outwards in semi-circle rather than inwards",
-          "src": "assets/af4f97860be22.png"
+          "notes": "music stands not facing chairs",
+          "src": "assets/a5efcf44e1597.png"
+        },
+        {
+          "label": false,
+          "notes": "chair and music_stand intersect\nmusic stands not placed in front of chairs",
+          "src": "assets/aec4844c017aa.png"
         },
         {
           "label": false,
           "notes": "music stands not facing chairs",
-          "src": "assets/abc7432a64a45.png"
+          "src": "assets/ab1c98635dd32.png"
         },
         {
           "label": false,
-          "notes": "chairs not angled properly in semi-circle\nmusic stands not in front of chairs\nmusic stands not facing chairs",
-          "src": "assets/ad61ea79e2d4c.png"
+          "notes": "music stands not facing chairs",
+          "src": "assets/a417a17819818.png"
         },
         {
           "label": false,
-          "notes": "music_stand and chair intersect\nchairs not angled properly in semi-circle\nmusic stands not facing chairs",
-          "src": "assets/aeae6d76c6298.png"
+          "notes": "music stands are not facing chairs\npiano stool is too far from piano",
+          "src": "assets/a04a6c884075a.png"
         },
         {
           "label": false,
-          "notes": "chairs facing outwards in semi-circle rather than inwards",
-          "src": "assets/a8f79ef932acf.png"
-        },
-        {
-          "label": false,
-          "notes": "chair and music_stand intersect\nchairs not angled properly in semi-circle\nmusic stands not facing chairs\nwhiteboard oriented perpendicularly to wall",
-          "src": "assets/a9ddad9105dea.png"
+          "notes": "chair and music_stand intersect\nmusic stands are not facing chairs\nchairs are not angled properly in semi-circle",
+          "src": "assets/a35d3f2f4f212.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "007",
-        "008",
-        "009",
-        "012",
-        "017",
-        "029",
-        "031",
-        "038",
+        "000",
+        "020",
+        "021",
+        "026",
+        "028",
+        "030",
         "042",
-        "047",
-        "050",
-        "051",
-        "064",
-        "078",
-        "090",
-        "095",
-        "100",
-        "103",
-        "107",
-        "113"
+        "045",
+        "049",
+        "053"
       ]
     },
     {
@@ -1866,37 +1006,37 @@
         {
           "label": true,
           "notes": "Looks good",
-          "src": "assets/af93517f82c2d.png"
+          "src": "assets/abedda9b2cab5.png"
         },
         {
           "label": true,
           "notes": "Looks good",
-          "src": "assets/ab4d0b0c9f20d.png"
+          "src": "assets/a644546b958ef.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good",
+          "src": "assets/ac2f3ef2ba3d0.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good",
+          "src": "assets/a0d39c96ca13f.png"
+        },
+        {
+          "label": false,
+          "notes": "chairs are too far from dining table",
+          "src": "assets/a242f39d40c08.png"
         },
         {
           "label": false,
           "notes": "There are chairs facing the shorter side of the table",
-          "src": "assets/a954b67f79152.png"
-        },
-        {
-          "label": false,
-          "notes": "painting is oriented perpendicular to the wall",
-          "src": "assets/acbb60126a5ab.png"
-        },
-        {
-          "label": false,
-          "notes": "counter is out of bounds\nchairs are too far from the dining table\nplant and lamp intersect",
-          "src": "assets/ac45a6f9edf1c.png"
+          "src": "assets/af7b7fa41f12d.png"
         },
         {
           "label": false,
           "notes": "There are chairs facing the shorter side of the table",
-          "src": "assets/a13690d252c16.png"
-        },
-        {
-          "label": false,
-          "notes": "cabinet is out of bounds\npainting is out of bounds",
-          "src": "assets/a9e987827a914.png"
+          "src": "assets/a848b34bfa871.png"
         },
         {
           "label": false,
@@ -1905,32 +1045,22 @@
         },
         {
           "label": false,
-          "notes": "There are chairs facing the shorter side of the table\nChairs are not facing the dining table",
-          "src": "assets/aa2788fdbf717.png"
+          "notes": "There are chairs facing the shorter side of the table",
+          "src": "assets/ab16f6fab27fd.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "000",
-        "005",
-        "010",
-        "022",
-        "025",
-        "026",
+        "002",
+        "012",
+        "013",
+        "014",
+        "024",
         "032",
-        "033",
-        "037",
-        "052",
-        "058",
-        "063",
-        "075",
-        "080",
-        "081",
-        "086",
-        "105",
-        "110",
-        "115",
-        "118"
+        "047",
+        "050",
+        "055",
+        "058"
       ]
     },
     {
@@ -1948,22 +1078,32 @@
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/acca6e583aa97.png"
+          "src": "assets/acd916275f68c.png"
         },
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/ab1ba98812927.png"
+          "src": "assets/a93e65589f1f1.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/adf1a81531cbb.png"
+          "label": false,
+          "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+          "src": "assets/adac0dee80c9d.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/adcbf7c32fb10.png"
+          "label": false,
+          "notes": "description is blocked by title\nTitle words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+          "src": "assets/acc0852f5365b.png"
+        },
+        {
+          "label": false,
+          "notes": "Title word works is not in column 1\nTitle word in is not in column 2\nTitle words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+          "src": "assets/aee2b3e4aea88.png"
+        },
+        {
+          "label": false,
+          "notes": "title is out of bounds\nTitle word pro- is not in column 3\nTitle word gress is not in column 4\nTitle words 'pro-' and 'gress' are not bottom-aligned",
+          "src": "assets/a884e27ce957b.png"
         },
         {
           "label": false,
@@ -1972,47 +1112,27 @@
         },
         {
           "label": false,
-          "notes": "title is out of bounds\nTitle word works is not in column 1\nTitle word in is not in column 2\nTitle word pro- is not in column 3\nTitle word gress is not in column 4\nTitle words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
-          "src": "assets/aa958e8dc8624.png"
-        },
-        {
-          "label": false,
           "notes": "Title words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
-          "src": "assets/a038c6c6ab97c.png"
+          "src": "assets/af5f29bb5c617.png"
         },
         {
           "label": false,
-          "notes": "title is out of bounds\nTitle word pro- is not in column 3\nTitle word gress is not in column 4",
-          "src": "assets/a1a109b7c118e.png"
-        },
-        {
-          "label": false,
-          "notes": "title is blocked by col\nTitle words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned",
-          "src": "assets/a4ec86599c774.png"
+          "notes": "title is out of bounds\nTitle word works is not in column 1\nTitle word in is not in column 2\nTitle word pro- is not in column 3\nTitle word gress is not in column 4\nTitle words 'works' and 'in' are not top-aligned\nTitle words 'pro-' and 'gress' are not bottom-aligned\nLocation is not in the fourth column\nLocation is not at the bottom of the fourth column",
+          "src": "assets/a8ef8fd4eabb2.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "006",
-        "011",
-        "013",
-        "014",
+        "001",
+        "003",
         "019",
-        "040",
-        "066",
-        "074",
-        "077",
-        "079",
-        "084",
-        "085",
-        "092",
-        "094",
-        "096",
-        "102",
-        "104",
-        "106",
-        "111",
-        "112"
+        "025",
+        "037",
+        "039",
+        "046",
+        "048",
+        "051",
+        "052"
       ]
     },
     {
@@ -2025,7 +1145,7 @@
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/a82d5186c057a.png"
+          "src": "assets/aad9959e70b0f.png"
         },
         {
           "label": true,
@@ -2038,63 +1158,53 @@
           "src": "assets/a7712884a2e8d.png"
         },
         {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/a74b06ff8d044.png"
-        },
-        {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/a1a48031ae318.png"
-        },
-        {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/ab6bf5ab0fcc0.png"
-        },
-        {
           "label": false,
           "notes": "title is out of bounds",
           "src": "assets/a3ef10844da0b.png"
         },
         {
           "label": false,
-          "notes": "title is out of bounds\nSparrows do not interact with the title\nSparrows are not scattered across the cover",
-          "src": "assets/a31580208316d.png"
-        },
-        {
-          "label": false,
-          "notes": "title is out of bounds",
-          "src": "assets/a50dc326ac0be.png"
+          "notes": "Sparrows are not scattered across the cover",
+          "src": "assets/a824b6b3b0ae6.png"
         },
         {
           "label": false,
           "notes": "Sparrows are not scattered across the cover",
-          "src": "assets/a53b2e4c3c944.png"
+          "src": "assets/af624a2762201.png"
+        },
+        {
+          "label": false,
+          "notes": "title is out of bounds",
+          "src": "assets/ad2b1d2237527.png"
+        },
+        {
+          "label": false,
+          "notes": "Title is not filling most of the front cover\nTitle is not arranged in a zigzag pattern\nSparrows do not interact with the title\nSparrows are not scattered across the cover",
+          "src": "assets/a673e16f346a3.png"
+        },
+        {
+          "label": false,
+          "notes": "title is out of bounds",
+          "src": "assets/ab69d948aaf7b.png"
+        },
+        {
+          "label": false,
+          "notes": "Title is not filling most of the front cover",
+          "src": "assets/a7c3eab60739a.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "002",
-        "016",
+        "004",
+        "005",
+        "006",
+        "018",
         "023",
-        "024",
-        "028",
+        "027",
+        "034",
         "035",
         "041",
-        "046",
-        "053",
-        "054",
-        "059",
-        "061",
-        "062",
-        "065",
-        "071",
-        "083",
-        "087",
-        "093",
-        "098",
-        "117"
+        "057"
       ]
     },
     {
@@ -2112,71 +1222,61 @@
         {
           "label": true,
           "notes": "Looks good!",
+          "src": "assets/a599ed9e395ab.png"
+        },
+        {
+          "label": true,
+          "notes": "Looks good!",
           "src": "assets/ad1bc3b53fc22.png"
         },
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/a30809b558deb.png"
+          "src": "assets/a330c80d2b976.png"
         },
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/a86d2ad9a4238.png"
+          "src": "assets/a066c0a76dfb4.png"
         },
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/a7eef526d42d2.png"
+          "src": "assets/aa5a5f6934ce2.png"
         },
         {
           "label": true,
           "notes": "Looks good!",
-          "src": "assets/a13155c01837e.png"
-        },
-        {
-          "label": true,
-          "notes": "Looks good!",
-          "src": "assets/a4a81fe7a7762.png"
+          "src": "assets/a8be4ab358ca1.png"
         },
         {
           "label": false,
           "notes": "Incorrect number of people in the central graphic, there should be 24 people",
-          "src": "assets/a1465c5a56b17.png"
+          "src": "assets/a07fb91367a4b.png"
+        },
+        {
+          "label": false,
+          "notes": "Incorrect number of people in the central graphic, there should be 24 people",
+          "src": "assets/a05c50f634673.png"
         },
         {
           "label": false,
           "notes": "title is blocked by description",
           "src": "assets/a9c3219e59977.png"
-        },
-        {
-          "label": false,
-          "notes": "Person image is not a solid white SVG icon: person_8",
-          "src": "assets/a377d5fe8c35b.png"
         }
       ],
       "dev_error": "",
       "item_ids": [
-        "001",
-        "004",
-        "021",
-        "027",
-        "034",
-        "039",
-        "045",
-        "048",
-        "049",
-        "057",
-        "068",
-        "073",
-        "076",
-        "082",
-        "089",
-        "099",
-        "108",
-        "109",
-        "116",
-        "119"
+        "009",
+        "010",
+        "011",
+        "015",
+        "022",
+        "031",
+        "038",
+        "044",
+        "056",
+        "059"
       ]
     }
   ],
