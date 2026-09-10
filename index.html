@@ -136,6 +136,8 @@
     .tut-ring.centered { border-color: transparent; }
     .tut-card { position: absolute; width: min(430px, 88vw); background: #fff; border-radius: 10px;
                 box-shadow: 0 12px 34px rgba(17, 24, 39, 0.32); padding: 0.95rem 1.1rem; }
+    /* Narrower when parked in the right margin, so it clears the target instead of sitting on it. */
+    .tut-card.side { width: min(400px, 31vw); }
     .tut-card h3 { margin: 0.1rem 0 0.5rem; font-size: 1rem; }
     .tut-count { margin: 0; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.07em;
                  text-transform: uppercase; color: #1d4ed8; }
@@ -2002,6 +2004,7 @@
         },
         {
           target: "#preview",
+          side: "right",
           title: "What to look for",
           html: `<p>This is the layout you are judging. Both kinds appear in this study:</p>`
                 + guidelinesHtml(),
@@ -2044,8 +2047,24 @@
       ring.style.width = `${r.width + pad * 2}px`;
       ring.style.height = `${r.height + pad * 2}px`;
 
-      // Prefer below the target, then above, then beside -- whichever fits the viewport.
-      const ch = card.offsetHeight, cw = card.offsetWidth, gap = 14;
+      const gap = 14;
+
+      // `side: "right"` for a target too big to sit beside anything -- the layout preview fills most
+      // of the viewport, so a card placed over it hides the very thing the step is about. Parked
+      // flush in the right margin it covers the controls instead, which the next step explains
+      // anyway. Narrowed by the `.side` class first, then measured, so it clears the image: at
+      // 1500px the default 430px card missed fitting by a single pixel and fell back on top of it.
+      card.classList.toggle("side", step.side === "right");
+      if (step.side === "right") {
+        const sw = card.offsetWidth, sh = card.offsetHeight;
+        card.style.left = `${Math.max(12, window.innerWidth - sw - 12)}px`;
+        card.style.top = `${Math.max(8, Math.min(r.top + (r.height - sh) / 2,
+                                                 window.innerHeight - sh - 8))}px`;
+        return;
+      }
+      const ch = card.offsetHeight, cw = card.offsetWidth;
+
+      // Otherwise: below the target, then above, then wherever it fits vertically.
       let top = r.bottom + gap;
       if (top + ch > window.innerHeight - 8) {
         top = r.top - gap - ch;
