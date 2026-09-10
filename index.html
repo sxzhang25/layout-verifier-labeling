@@ -171,8 +171,9 @@
       </p>
       <h2>Instructions</h2>
       <p>
-        You will be shown computer-generated layouts and asked to judge each one <b>True</b> or
-        <b>False</b>. The work is split into separate layout tasks, with <b>20 layouts</b> in each task.
+        You will be shown computer-generated layouts and asked to judge each one <b>Positive</b> or
+        <b>Negative</b>. The work is split into separate layout tasks, with <b>20 layouts</b> in each
+        task.
       </p>
       <p class="hint">
         A short walkthrough of the page will start once you begin.
@@ -222,8 +223,8 @@
           <div class="bar"><div id="bar-fill"></div></div>
 
           <div class="verdictrow">
-            <button type="button" class="t" id="btn-true">True</button>
-            <button type="button" class="f" id="btn-false">False</button>
+            <button type="button" class="t" id="btn-true">Positive</button>
+            <button type="button" class="f" id="btn-false">Negative</button>
           </div>
 
           <div class="row">
@@ -237,7 +238,7 @@
           </div>
 
           <p class="hint">
-            Keys: <b>t</b> true &middot; <b>f</b> false &middot; <b>u</b> clear &middot; &larr; / &rarr; move
+            Keys: <b>p</b> positive &middot; <b>n</b> negative &middot; <b>u</b> clear &middot; &larr; / &rarr; move
           </p>
           <div class="row">
             <label class="hint"><input type="checkbox" id="auto-advance" checked>
@@ -1817,7 +1818,7 @@
 
         const verdict = document.createElement("div");
         verdict.className = "verdict " + (ex.label ? "t" : "f");
-        verdict.textContent = ex.label ? "True" : "False";
+        verdict.textContent = ex.label ? "Positive" : "Negative";
         card.append(verdict);
 
         const src = OFFLINE
@@ -1828,7 +1829,7 @@
           img.src = src;
           img.alt = `example ${i + 1}`;
           img.addEventListener("click", () =>
-            openLightbox(src, `${ex.label ? "True" : "False"} - ${ex.notes || "no note"}`));
+            openLightbox(src, `${ex.label ? "Positive" : "Negative"} - ${ex.notes || "no note"}`));
           card.append(img);
         }
         if (ex.notes) {
@@ -1993,10 +1994,11 @@
           target: "#devwrap",
           title: "The dev set of examples",
           html: `<p>Below it, a <b>dev set of examples</b>: layouts for that same task that have
-                 already been labeled, each shown with its True or False verdict and a note
-                 explaining why. Green is True, red is False, and you can scroll sideways for more.</p>
-                 <p>For each unlabeled layout, assign <b>True</b> or <b>False</b> based on the task
-                 description <i>and</i> the dev-set examples.</p>`,
+                 already been labeled, each shown with its Positive or Negative verdict and a note
+                 explaining why. Green is Positive, red is Negative, and you can scroll sideways for
+                 more.</p>
+                 <p>For each unlabeled layout, assign <b>Positive</b> or <b>Negative</b> based on the
+                 task description <i>and</i> the dev-set examples.</p>`,
         },
         {
           target: "#preview",
@@ -2008,28 +2010,12 @@
           target: "#controls",
           title: "Shortcuts",
           html: `<ol>
-                   <li>You can use <b>t</b> for True and <b>f</b> for False. Arrow keys move
+                   <li>You can use <b>p</b> for Positive and <b>n</b> for Negative. Arrow keys move
                      between layouts, and <b>u</b> resets a verdict.</li>
                    <li>Your answers save as you go. You can stop and come back to where you
                      left off.</li>
                    <li>You can move between sections at any time using the links at the top.</li>
                  </ol>`,
-        },
-        {
-          target: null,
-          title: "A few principles",
-          html: `<ul>
-                   <li>Judge against the <b>task description and the dev-set examples</b>, not your
-                     own taste. When a call is borderline, match the closest example.</li>
-                   <li>Judge <b>where things are</b>, not how they look. A correctly placed layout
-                     with an ugly sofa or a low-quality picture is still True.</li>
-                   <li>If the description does not ask for something, do not mark a layout down
-                     for it.</li>
-                   <li>Judge each layout on its own. Do not try to keep any balance of True and
-                     False.</li>
-                   <li>If a layout shows no image, or the description looks unrelated to what you
-                     see, that is a bug on our side. Leave it unlabeled and tell us.</li>
-                 </ul>`,
         },
       ];
     }
@@ -2255,8 +2241,8 @@
       if (state.view !== "task") return;
       if (ev.key === "ArrowLeft") { step(-1); ev.preventDefault(); }
       else if (ev.key === "ArrowRight") { step(1); ev.preventDefault(); }
-      else if (ev.key === "t" || ev.key === "T") saveLabel(1);
-      else if (ev.key === "f" || ev.key === "F") saveLabel(0);
+      else if (ev.key === "p" || ev.key === "P") saveLabel(1);
+      else if (ev.key === "n" || ev.key === "N") saveLabel(0);
       else if (ev.key === "u" || ev.key === "U") saveLabel(-1);
     });
 
